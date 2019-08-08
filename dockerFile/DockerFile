@@ -1,11 +1,8 @@
 FROM ubuntu:latest
 
-ENV AWS_ACCESS_KEY_ID=ASIAVHQ3S4TDTJR7MLEY
-ENV AWS_SECRET_ACCESS_KEY=mUjq1LSowPtfyp/Wwapgg5SPHeXD3QwYWUfNbEwr
-ENV \ AWS_SESSION_TOKEN=AgoJb3JpZ2luX2VjEPD//////////wEaCXVzLWVhc3QtMSJGMEQCIHm9osH4URSUreSyTdGA1JdI83hNxSOf44u4nBqiEFJUAiB6k4WuYW4x04l/svwSjKjtnvPC9LpWE6D98y0s87MGSyrnAgh4EAEaDDM1OTc2MTM3MjM1OSIMkrmRDAxONHfgi5k3KsQCsUiNgAtSiX3FmM8thJFlfOq1j1hZmDmVbu1zjOOcaJFIZToDZz7tH/E9eBm9LnOLPixsLVIEupjjKei9aWcO5GzLothURkK7/Y2jR0YAnc71hm2LNKEJwE5foLGgdj7OexnxKv2dpmdfpsGvHYwkFaiWmN1pB1HnP0O59mXUOshZEEAznLALLfql4BZSwTmE+e8EG7sxT5E6Vvs/n6nyaFJ+PpyB/PVFQr6fybQFod2yFihshnb0twCVi0/ZRDNTnwdlDY77XK7NgfBzJ2kVkfVVrvqXJvy5aAymeOgihZd4OvrIrUvwuATzNKiuyUJc9At4q0KUt0cq1Xa87QAOcrMgrimaSRHy8p+Bgsq0BQ0RtsfsmHoBzC/B7245aCuf+DDutSnJa8nHicWQIbpBWcZp6sW8YuETDx9Wq20w7JikFxD3MMr4sOoFOrUBWvsLlTnEVyrUbZyz3Z23UHlRJTfJ1r+39KUXOe9CHhQ/xUUeo6zyUcrxLnYK9bezsRKcloQkpBLeDPy3Hf5f9CNDV/Tu0F3W1wDSRTuIRDu1wLV3NR3KyBHQWtNpIB5sKs/PqkK7oXZ+Emxmg16Oi/k9Gkvhx1ikGK3Bj1S7a7QGnppsi76P0iVV+fRifrE2POEeNVv/4WKCRnZF1qwnQvlV38Cs3+XIs1gQw8wdjE+Vf2z+fA==
 RUN apt-get update && \
 apt-get install -y default-jre awscli && \ 
-aws s3 cp s3://umd-demo-bucket/demo-0.0.1-SNAPSHOT.jar myProject.jar
+aws s3 cp s3://dockerjavas3/dockerJava/target/dockerJava-0.0.1-SNAPSHOT.jar myProject.jar
 
 EXPOSE 8080
 
