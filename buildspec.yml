@@ -1,8 +1,6 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
   pre_build:
     commands:
       $(aws ecr get-login --no-include-email --region us-east-1)
@@ -14,6 +12,4 @@ phases:
   post_build:
     commands:
       docker push 359761372359.dkr.ecr.us-east-1.amazonaws.com/docker-java:latest
-artifacts:
-  files:
    
